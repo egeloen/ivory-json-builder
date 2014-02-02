@@ -35,5 +35,5 @@ We love contributors! Ivory is an open source project. If you'd like to contribu
 
 ## License
 
-The Ivory Google Map is under the MIT license. For the full copyright and license information, please read the
+The Ivory JSON Builder is under the MIT license. For the full copyright and license information, please read the
 [LICENSE](LICENSE) file that was distributed with this source code.
