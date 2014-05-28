@@ -21,7 +21,7 @@ use Symfony\Component\PropertyAccess\PropertyAccessor;
 class JsonBuilder
 {
     /** @var \Symfony\Component\PropertyAccess\PropertyAccessor */
-    protected $accesor;
+    protected $accessor;
 
     /** @var array */
     protected $values;
