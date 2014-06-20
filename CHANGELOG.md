@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 1.0.2 (????-??-??)
+
+ * bb6ddaa - [Travis][Composer] Remove --dev
+ * e451062 - [Composer] Upgrade to PSR-4
+
 ### 1.0.1 (2014-06-17)
 
  * 231f3a3 - [README] Add scrutunizer CI badge
