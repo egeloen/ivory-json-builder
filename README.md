@@ -3,6 +3,10 @@
 [![Build Status](https://secure.travis-ci.org/egeloen/ivory-json-builder.png)](http://travis-ci.org/egeloen/ivory-json-builder)
 [![Coverage Status](https://coveralls.io/repos/egeloen/ivory-json-builder/badge.png?branch=master)](https://coveralls.io/r/egeloen/ivory-json-builder?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/egeloen/ivory-json-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/egeloen/ivory-json-builder/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/egeloen/json-builder/v/stable.svg)](https://packagist.org/packages/egeloen/json-builder)
+[![Latest Unstable Version](https://poser.pugx.org/egeloen/json-builder/v/unstable.svg)](https://packagist.org/packages/egeloen/json-builder)
+[![Total Downloads](https://poser.pugx.org/egeloen/json-builder/downloads.svg)](https://packagist.org/packages/egeloen/json-builder)
+[![License](https://poser.pugx.org/egeloen/json-builder/license.svg)](https://packagist.org/packages/egeloen/json-builder)
 
 The Ivory JSON builder is a PHP 5.3+ library allowing you to build your JSON through the Symfony2
 [PropertyAccess](http://symfony.com/doc/current/components/property_access/index.html) component while keeping the
