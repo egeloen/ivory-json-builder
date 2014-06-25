@@ -3,6 +3,8 @@
 [![Build Status](https://secure.travis-ci.org/egeloen/ivory-json-builder.png)](http://travis-ci.org/egeloen/ivory-json-builder)
 [![Coverage Status](https://coveralls.io/repos/egeloen/ivory-json-builder/badge.png?branch=master)](https://coveralls.io/r/egeloen/ivory-json-builder?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/egeloen/ivory-json-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/egeloen/ivory-json-builder/?branch=master)
+[![Dependency Status](https://www.versioneye.com/php/egeloen:json-builder/badge.svg)](https://www.versioneye.com/php/egeloen:json-builder)
+
 [![Latest Stable Version](https://poser.pugx.org/egeloen/json-builder/v/stable.svg)](https://packagist.org/packages/egeloen/json-builder)
 [![Latest Unstable Version](https://poser.pugx.org/egeloen/json-builder/v/unstable.svg)](https://packagist.org/packages/egeloen/json-builder)
 [![Total Downloads](https://poser.pugx.org/egeloen/json-builder/downloads.svg)](https://packagist.org/packages/egeloen/json-builder)
