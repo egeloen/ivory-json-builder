@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 1.0.2 (????-??-??)
+### 1.0.2 (2014-08-12)
 
  * 3a54d10 - [Travis] Improve build matrix
  * 29d1e12 - [README] Add versioneye badge
