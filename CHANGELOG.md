@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 1.0.3 (????-??-??)
+
+ * b98e8a6 - [README] Rely on relative link
+ * 3bf9f1d - Add contributing doc
+
 ### 1.0.2 (2014-08-12)
 
  * 3a54d10 - [Travis] Improve build matrix
