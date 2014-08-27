@@ -29,13 +29,13 @@ echo $json;
 
 ## Documentation
 
- 1. [Installation](doc/installation.md)
- 2. [Usage](doc/usage.md)
+ 1. [Installation](/doc/installation.md)
+ 2. [Usage](/doc/usage.md)
 
 ## Testing
 
 The library is fully unit tested by [PHPUnit](http://www.phpunit.de/) with a code coverage close to **100%**. To
-execute the test suite, check the travis [configuration](.travis.yml).
+execute the test suite, check the travis [configuration](/.travis.yml).
 
 ## Contribution
 
@@ -44,4 +44,4 @@ We love contributors! Ivory is an open source project. If you'd like to contribu
 ## License
 
 The Ivory JSON Builder is under the MIT license. For the full copyright and license information, please read the
-[LICENSE](LICENSE) file that was distributed with this source code.
+[LICENSE](/LICENSE) file that was distributed with this source code.
