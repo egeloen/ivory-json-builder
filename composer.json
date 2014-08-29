@@ -19,7 +19,7 @@
         "satooshi/php-coveralls": "~0.6"
     },
     "autoload": {
-        "psr-4": { "Ivory\\JsonBuilder\\": "" }
+        "psr-4": { "Ivory\\JsonBuilder\\": "src/" }
     },
     "config": {
         "bin-dir": "bin/"

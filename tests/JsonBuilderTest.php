@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\JsonBuilder\Tests;
+namespace Ivory\Tests\JsonBuilder;
 
 use Ivory\JsonBuilder\JsonBuilder;
 
