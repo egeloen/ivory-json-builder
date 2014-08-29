@@ -2,6 +2,7 @@
 
 ### 1.0.3 (????-??-??)
 
+ * 1ad3abb - [Gitignore] Remove Composer installer and phar
  * 7a58072 - Migrate to PSR-4
  * b98e8a6 - [README] Rely on relative link
  * 3bf9f1d - Add contributing doc
