@@ -21,16 +21,16 @@ use Symfony\Component\PropertyAccess\PropertyAccessor;
 class JsonBuilder
 {
     /** @var \Symfony\Component\PropertyAccess\PropertyAccessor */
-    protected $accessor;
+    private $accessor;
 
     /** @var array */
-    protected $values;
+    private $values;
 
     /** @var array */
-    protected $escapes;
+    private $escapes;
 
     /** @var integer */
-    protected $jsonEncodeOptions;
+    private $jsonEncodeOptions;
 
     /**
      * Creates a json builder.
