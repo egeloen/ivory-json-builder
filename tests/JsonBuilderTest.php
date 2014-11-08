@@ -21,7 +21,7 @@ use Ivory\JsonBuilder\JsonBuilder;
 class JsonBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /** @var \Ivory\JsonBuilder\JsonBuilder */
-    protected $jsonBuilder;
+    private $jsonBuilder;
 
     /**
      * {@inheritdoc}
@@ -198,7 +198,7 @@ class JsonBuilderTest extends \PHPUnit_Framework_TestCase
     /**
      * Asserts the json builder default state.
      */
-    protected function assertDefaultState()
+    private function assertDefaultState()
     {
         $this->assertSame(0, $this->jsonBuilder->getJsonEncodeOptions());
         $this->assertFalse($this->jsonBuilder->hasValues());
