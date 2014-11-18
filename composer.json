@@ -21,6 +21,9 @@
     "autoload": {
         "psr-4": { "Ivory\\JsonBuilder\\": "src/" }
     },
+    "autoload-dev": {
+        "psr-4": { "Ivory\\Tests\\JsonBuilder\\": "tests/" }
+    },
     "config": {
         "bin-dir": "bin/"
     },
