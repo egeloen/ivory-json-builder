@@ -2,6 +2,7 @@
 
 ### 2.0.0 (????-??-??)
 
+ * 9ad976d - [Composer] Rely on autoload-dev
  * 1a9b3f2 - [Encapsulation] Move everything from protected to private (except for entry point)
 
 ### 1.0.3 (2014-11-08)
