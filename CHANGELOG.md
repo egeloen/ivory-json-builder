@@ -2,6 +2,9 @@
 
 ### 2.0.0 (????-??-??)
 
+ * 57ae312 - [Travis] Update config
+ * 29c1dec - Add .gitattributes
+ * d858e7e - [Readme] Fix badge uri
  * 9ad976d - [Composer] Rely on autoload-dev
  * 1a9b3f2 - [Encapsulation] Move everything from protected to private (except for entry point)
 
