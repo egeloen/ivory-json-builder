@@ -2,6 +2,7 @@
 
 ### 2.0.0 (????-??-??)
 
+ * 92046ec - [Travis] Move Symfony 2.6.*@dev to 2.6.*
  * 57ae312 - [Travis] Update config
  * 29c1dec - Add .gitattributes
  * d858e7e - [Readme] Fix badge uri
