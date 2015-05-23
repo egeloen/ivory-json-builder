@@ -1,6 +1,6 @@
 # Usage
 
-The Ivory JSON builder allows yout to build your JSON through the Symfony2
+The Ivory JSON builder allows you to build your JSON through the Symfony2
 [PropertyAccess](http://symfony.com/doc/current/components/property_access/index.html) component while keeping the
 control of the value escaping.
 
