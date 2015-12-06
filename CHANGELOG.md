@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 2.0.1 (????-???-??)
+
+ * 86cd2b8 - Add Symfony3 support
+ 
 ### 2.0.0 (2014-12-29)
 
  * e1ac92e - [Travis] Add composer prefer lowest build
