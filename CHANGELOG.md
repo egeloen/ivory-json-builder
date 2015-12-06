@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 2.0.1 (????-???-??)
+### 2.0.1 (2015-12-06)
 
  * 86cd2b8 - Add Symfony3 support
  
