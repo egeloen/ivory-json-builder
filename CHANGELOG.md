@@ -2,6 +2,7 @@
 
 ### 2.0.2 (????-??-??)
 
+ * 99e0268 - [Travis] Fix tests
  * 9d208bd - [Travis] Simplify matrix
  * 2aebda4 - [License] Happy new year
  * eca6f5f - [Travis] Remove coveralls
