@@ -24,7 +24,7 @@ install:
     - composer self-update
     - composer update --prefer-source `if [[ $COMPOSER_PREFER_LOWEST = true ]]; then echo "--prefer-lowest --prefer-stable"; fi`
 
-script: bin/phpunit --coverage-clover build/clover.xml
+script: vendor/bin/phpunit --coverage-clover build/clover.xml
 
 after_success:
     - wget https://scrutinizer-ci.com/ocular.phar
