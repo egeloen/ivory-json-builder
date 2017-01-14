@@ -1,5 +1,11 @@
 # CHANGELOG
 
+### 2.0.2 (????-??-??)
+
+ * 9d208bd - [Travis] Simplify matrix
+ * 2aebda4 - [License] Happy new year
+ * eca6f5f - [Travis] Remove coveralls
+
 ### 2.0.1 (2015-12-06)
 
  * 86cd2b8 - Add Symfony3 support
