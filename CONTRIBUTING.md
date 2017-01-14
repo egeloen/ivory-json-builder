@@ -44,7 +44,7 @@ it immediately. Before, you will need to add tests and update the doc. For the t
 To run the tests, use the following command:
 
 ``` bash
-$ bin/phpunit
+$ vendor/bin/phpunit
 ```
 
 Then, when you have fixed the bug, tested it and documented it, you can commit and push it with the following commands:
