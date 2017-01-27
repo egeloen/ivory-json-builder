@@ -14,26 +14,32 @@ namespace Ivory\JsonBuilder;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 
 /**
- * Json builder.
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
 class JsonBuilder
 {
-    /** @var \Symfony\Component\PropertyAccess\PropertyAccessor */
+    /**
+     * @var PropertyAccessor
+     */
     private $accessor;
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private $values;
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private $escapes;
 
-    /** @var integer */
+    /**
+     * @var int
+     */
     private $jsonEncodeOptions;
 
     /**
-     * Creates a json builder.
+     * {@inheritdoc}
      */
     public function __construct()
     {
@@ -43,9 +49,7 @@ class JsonBuilder
     }
 
     /**
-     * Gets the json encode options.
-     *
-     * @return integer The json encode options.
+     * @return int
      */
     public function getJsonEncodeOptions()
     {
@@ -53,11 +57,9 @@ class JsonBuilder
     }
 
     /**
-     * Sets the json encode options.
+     * @param int $jsonEncodeOptions
      *
-     * @param integer $jsonEncodeOptions The json encode options.
-     *
-     * @return \Ivory\JsonBuilder\JsonBuilder The json builder.
+     * @return JsonBuilder
      */
     public function setJsonEncodeOptions($jsonEncodeOptions)
     {
@@ -67,9 +69,7 @@ class JsonBuilder
     }
 
     /**
-     * Checks if the json builder has values.
-     *
-     * @return boolean TRUE if the json builder has values else FALSE.
+     * @return bool
      */
     public function hasValues()
     {
@@ -77,9 +77,7 @@ class JsonBuilder
     }
 
     /**
-     * Gets the json builder values.
-     *
-     * @return array The json builder values.
+     * @return array
      */
     public function getValues()
     {
@@ -87,12 +85,10 @@ class JsonBuilder
     }
 
     /**
-     * Sets values without control on the escaping.
+     * @param array  $values
+     * @param string $pathPrefix
      *
-     * @param array  $values     The values.
-     * @param string $pathPrefix The property path prefix.
-     *
-     * @return \Ivory\JsonBuilder\JsonBuilder The json builder.
+     * @return JsonBuilder
      */
     public function setValues(array $values, $pathPrefix = null)
     {
@@ -110,14 +106,11 @@ class JsonBuilder
     }
 
     /**
-     * Sets a value according to a path & an escape flag. If the escape flag is set to false,
-     * the value will be rendered as it is given (without escaping).
+     * @param string $path
+     * @param mixed  $value
+     * @param bool   $escapeValue
      *
-     * @param string  $path        The property path.
-     * @param mixed   $value       The value.
-     * @param boolean $escapeValue TRUE if the value is escaped else FALSE.
-     *
-     * @return \Ivory\JsonBuilder\JsonBuilder The json builder.
+     * @return JsonBuilder
      */
     public function setValue($path, $value, $escapeValue = true)
     {
@@ -134,11 +127,9 @@ class JsonBuilder
     }
 
     /**
-     * Removes a value according to a property path.
+     * @param string $path
      *
-     * @param string $path The property path.
-     *
-     * @return \Ivory\JsonBuilder\JsonBuilder The json builder.
+     * @return JsonBuilder
      */
     public function removeValue($path)
     {
@@ -149,9 +140,7 @@ class JsonBuilder
     }
 
     /**
-     * Resets the builder.
-     *
-     * @return \Ivory\JsonBuilder\JsonBuilder The json builder.
+     * @return JsonBuilder
      */
     public function reset()
     {
@@ -163,9 +152,7 @@ class JsonBuilder
     }
 
     /**
-     * Builds the json.
-     *
-     * @return string The builded json.
+     * @return string
      */
     public function build()
     {
