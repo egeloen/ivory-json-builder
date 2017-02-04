@@ -39,7 +39,8 @@ execute the test suite, check the travis [configuration](/.travis.yml).
 
 ## Contribution
 
-We love contributors! Ivory is an open source project. If you'd like to contribute, feel free to propose a PR!
+We love contributors! Ivory is an open source project. If you'd like to contribute, feel free to propose a PR! You
+can follow the [CONTRIBUTING](/CONTRIBUTING.md) file which will explain you how to set up the project.
 
 ## License
 
