@@ -2,6 +2,8 @@
 
 ### 2.0.2 (????-??-??)
 
+ * 1715e45 - [Docker] Add HHVM container
+ * 33db7c9 - Add docker support
  * 07e0ba8 - Add PHP-CS-Fixer support
  * 99e0268 - [Travis] Fix tests
  * 9d208bd - [Travis] Simplify matrix
