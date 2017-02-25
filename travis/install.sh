@@ -15,11 +15,6 @@ if [ "$DOCKER_BUILD" = true ]; then
     exit
 fi
 
-if [ "$TRAVIS_PHP_VERSION" = "5.3.3" ]; then
-    composer config -g secure-http false
-    composer config -g disable-tls true
-fi
-
 composer self-update
 composer remove --no-update --dev friendsofphp/php-cs-fixer
 composer update --prefer-source `if [ "$COMPOSER_PREFER_LOWEST" = true ]; then echo "--prefer-lowest --prefer-stable"; fi`

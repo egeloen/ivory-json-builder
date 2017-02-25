@@ -13,25 +13,12 @@ $ curl -s https://getcomposer.org/installer | php
 $ sudo mv composer.phar /usr/local/bin/composer
 ```
 
-## Define dependencies
-
-Create a ``composer.json`` file at the root directory of your project and simply require the
-``egeloen/json-builder`` package:
-
-```
-{
-    "require": {
-        "egeloen/json-builder": "~1.0"
-    }
-}
-```
-
 ## Install dependencies
 
-Now, you have define your dependencies, you can install them:
+Require the library in your `composer.json` file:
 
-```
-$ composer install
+``` bash
+$ composer require egeloen/json-builder
 ```
 
 Composer will automatically download your dependencies & create an autoload file in the ``vendor`` directory.

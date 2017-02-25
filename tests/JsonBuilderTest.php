@@ -38,10 +38,10 @@ class JsonBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testValues()
     {
-        $this->jsonBuilder->setValues(array('foo' => 'bar'));
+        $this->jsonBuilder->setValues(['foo' => 'bar']);
 
         $this->assertTrue($this->jsonBuilder->hasValues());
-        $this->assertSame(array('[foo]' => 'bar'), $this->jsonBuilder->getValues());
+        $this->assertSame(['[foo]' => 'bar'], $this->jsonBuilder->getValues());
     }
 
     public function testValueWithEscape()
@@ -49,7 +49,7 @@ class JsonBuilderTest extends \PHPUnit_Framework_TestCase
         $this->jsonBuilder->setValue('[foo]', 'bar');
 
         $this->assertTrue($this->jsonBuilder->hasValues());
-        $this->assertSame(array('[foo]' => 'bar'), $this->jsonBuilder->getValues());
+        $this->assertSame(['[foo]' => 'bar'], $this->jsonBuilder->getValues());
     }
 
     public function testValueWithoutEscape()
@@ -75,7 +75,7 @@ class JsonBuilderTest extends \PHPUnit_Framework_TestCase
     public function testReset()
     {
         $this->jsonBuilder
-            ->setValues(array('foo' => 'bar'))
+            ->setValues(['foo' => 'bar'])
             ->reset();
 
         $this->assertDefaultState();
@@ -125,21 +125,21 @@ class JsonBuilderTest extends \PHPUnit_Framework_TestCase
      */
     public function valuesProvider()
     {
-        return array(
+        return [
             // Arrays
-            array('["foo"]', array('foo')),
-            array('["foo","bar","baz"]', array('foo', 'bar', 'baz')),
-            array('[["foo","bar"],[["baz"]],"bat"]', array(array('foo', 'bar'), array(array('baz')), 'bat')),
+            ['["foo"]', ['foo']],
+            ['["foo","bar","baz"]', ['foo', 'bar', 'baz']],
+            ['[["foo","bar"],[["baz"]],"bat"]', [['foo', 'bar'], [['baz']], 'bat']],
 
             // Objects
-            array('{"foo":"bar"}', array('foo' => 'bar')),
-            array('{"foo":"bar","baz":"bat","ban":"boo"}', array('foo' => 'bar', 'baz' => 'bat', 'ban' => 'boo')),
-            array('{"foo":"bar","baz":{"bat":"ban"}}', array('foo' => 'bar', 'baz' => array('bat' => 'ban'))),
+            ['{"foo":"bar"}', ['foo' => 'bar']],
+            ['{"foo":"bar","baz":"bat","ban":"boo"}', ['foo' => 'bar', 'baz' => 'bat', 'ban' => 'boo']],
+            ['{"foo":"bar","baz":{"bat":"ban"}}', ['foo' => 'bar', 'baz' => ['bat' => 'ban']]],
 
             // Mixed
-            array('["foo",{"bar":"baz"},"bat","ban"]', array('foo', array('bar' => 'baz'), 'bat', 'ban')),
-            array('{"foo":"bar","baz":["bat","ban"]}', array('foo' => 'bar', 'baz' => array('bat', 'ban'))),
-        );
+            ['["foo",{"bar":"baz"},"bat","ban"]', ['foo', ['bar' => 'baz'], 'bat', 'ban']],
+            ['{"foo":"bar","baz":["bat","ban"]}', ['foo' => 'bar', 'baz' => ['bat', 'ban']]],
+        ];
     }
 
     /**
@@ -147,46 +147,46 @@ class JsonBuilderTest extends \PHPUnit_Framework_TestCase
      */
     public function valueProvider()
     {
-        return array(
+        return [
             // Arrays
-            array('[foo]', array('[0]' => array('value' => 'foo', 'escape' => false))),
-            array('[foo,"bar",baz]', array(
-                '[0]' => array('value' => 'foo', 'escape' => false),
-                '[1]' => array('value' => 'bar', 'escape' => true),
-                '[2]' => array('value' => 'baz', 'escape' => false),
-            )),
-            array('[[foo,"bar"],[baz],bat]', array(
-                '[0][0]' => array('value' => 'foo', 'escape' => false),
-                '[0][1]' => array('value' => 'bar', 'escape' => true),
-                '[1][0]' => array('value' => 'baz', 'escape' => false),
-                '[2]'    => array('value' => 'bat', 'escape' => false),
-            )),
+            ['[foo]', ['[0]' => ['value' => 'foo', 'escape' => false]]],
+            ['[foo,"bar",baz]', [
+                '[0]' => ['value' => 'foo', 'escape' => false],
+                '[1]' => ['value' => 'bar', 'escape' => true],
+                '[2]' => ['value' => 'baz', 'escape' => false],
+            ]],
+            ['[[foo,"bar"],[baz],bat]', [
+                '[0][0]' => ['value' => 'foo', 'escape' => false],
+                '[0][1]' => ['value' => 'bar', 'escape' => true],
+                '[1][0]' => ['value' => 'baz', 'escape' => false],
+                '[2]'    => ['value' => 'bat', 'escape' => false],
+            ]],
 
             // Objects
-            array('{"foo":bar}', array('[foo]' => array('value' => 'bar', 'escape' => false))),
-            array('{"foo":bar,"baz":"bat","ban":boo}', array(
-                '[foo]' => array('value' => 'bar', 'escape' => false),
-                '[baz]' => array('value' => 'bat', 'escape' => true),
-                '[ban]' => array('value' => 'boo', 'escape' => false),
-            )),
-            array('{"foo":"bar","baz":{"bat":ban}}', array(
-                '[foo]'      => array('value' => 'bar', 'escape' => true),
-                '[baz][bat]' => array('value' => 'ban', 'escape' => false),
-            )),
+            ['{"foo":bar}', ['[foo]' => ['value' => 'bar', 'escape' => false]]],
+            ['{"foo":bar,"baz":"bat","ban":boo}', [
+                '[foo]' => ['value' => 'bar', 'escape' => false],
+                '[baz]' => ['value' => 'bat', 'escape' => true],
+                '[ban]' => ['value' => 'boo', 'escape' => false],
+            ]],
+            ['{"foo":"bar","baz":{"bat":ban}}', [
+                '[foo]'      => ['value' => 'bar', 'escape' => true],
+                '[baz][bat]' => ['value' => 'ban', 'escape' => false],
+            ]],
 
             // Mixed
-            array('["foo",{"bar":baz},bat,"ban"]', array(
-                '[0]'      => array('value' => 'foo', 'escape' => true),
-                '[1][bar]' => array('value' => 'baz', 'escape' => false),
-                '[2]'      => array('value' => 'bat', 'escape' => false),
-                '[3]'      => array('value' => 'ban', 'escape' => true),
-            )),
-            array('{"foo":bar,"baz":[bat,"ban"]}', array(
-                '[foo]'    => array('value' => 'bar', 'escape' => false),
-                '[baz][0]' => array('value' => 'bat', 'escape' => false),
-                '[baz][1]' => array('value' => 'ban', 'escape' => true),
-            )),
-        );
+            ['["foo",{"bar":baz},bat,"ban"]', [
+                '[0]'      => ['value' => 'foo', 'escape' => true],
+                '[1][bar]' => ['value' => 'baz', 'escape' => false],
+                '[2]'      => ['value' => 'bat', 'escape' => false],
+                '[3]'      => ['value' => 'ban', 'escape' => true],
+            ]],
+            ['{"foo":bar,"baz":[bat,"ban"]}', [
+                '[foo]'    => ['value' => 'bar', 'escape' => false],
+                '[baz][0]' => ['value' => 'bat', 'escape' => false],
+                '[baz][1]' => ['value' => 'ban', 'escape' => true],
+            ]],
+        ];
     }
 
     private function assertDefaultState()

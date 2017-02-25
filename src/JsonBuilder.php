@@ -12,6 +12,7 @@
 namespace Ivory\JsonBuilder;
 
 use Symfony\Component\PropertyAccess\PropertyAccessor;
+use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
@@ -19,7 +20,7 @@ use Symfony\Component\PropertyAccess\PropertyAccessor;
 class JsonBuilder
 {
     /**
-     * @var PropertyAccessor
+     * @var PropertyAccessorInterface
      */
     private $accessor;
 
@@ -39,11 +40,11 @@ class JsonBuilder
     private $jsonEncodeOptions;
 
     /**
-     * {@inheritdoc}
+     * @param PropertyAccessorInterface|null $propertyAccessor
      */
-    public function __construct()
+    public function __construct(PropertyAccessorInterface $propertyAccessor = null)
     {
-        $this->accessor = new PropertyAccessor();
+        $this->accessor = $propertyAccessor ?: new PropertyAccessor();
 
         $this->reset();
     }
@@ -144,8 +145,8 @@ class JsonBuilder
      */
     public function reset()
     {
-        $this->values = array();
-        $this->escapes = array();
+        $this->values = [];
+        $this->escapes = [];
         $this->jsonEncodeOptions = 0;
 
         return $this;
@@ -156,7 +157,7 @@ class JsonBuilder
      */
     public function build()
     {
-        $json = array();
+        $json = [];
 
         foreach ($this->values as $path => $value) {
             $this->accessor->setValue($json, $path, $value);
