@@ -4,7 +4,6 @@ set -e
 
 COMPOSER_PREFER_LOWEST=${COMPOSER_PREFER_LOWEST-false}
 DOCKER_BUILD=${DOCKER_BUILD-false}
-TRAVIS_PHP_VERSION=${TRAVIS_PHP_VERSION-5.6}
 
 if [ "$DOCKER_BUILD" = true ]; then
     cp .env.dist .env
