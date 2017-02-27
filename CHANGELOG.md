@@ -2,6 +2,7 @@
 
 ### 3.0.0 (????-??-??)
 
+ * 2c5ac4e - [Composer] Fix description
  * 99c381e - [Travis] Fix scripts according to last changes
  * 4b5fb83 - Bump PHP to 5.6 + Symfony to 2.7 + Add AppVeyor support
  * 1715e45 - [Docker] Add HHVM container
