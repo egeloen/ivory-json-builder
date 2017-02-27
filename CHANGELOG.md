@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 3.0.1 (????-??-??)
+
+ * 5638d50 - Fix UPGRADE file
+
 ### 3.0.0 (2017-02-27)
 
  * 2c5ac4e - [Composer] Fix description
