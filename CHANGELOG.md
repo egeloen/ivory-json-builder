@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 3.0.0 (????-??-??)
+### 3.0.0 (2017-02-27)
 
  * 2c5ac4e - [Composer] Fix description
  * 99c381e - [Travis] Fix scripts according to last changes
